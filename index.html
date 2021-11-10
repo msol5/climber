@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Climb Ad Infinitum</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<br> <br>
+  <main class="px-3">
+    <h1><b>Climb</b> Ad Infinitum</h1>
+
+    <p class="lead">You have taken <span style=font-weight:bold id="counter"></span> steps.</p>
+    <p class="lead">You are passively taking <span style=font-weight:bold id="sps"></span> steps per second.</p>
+
+    <img src="https://westerngallery.wwu.edu/files/2020-11/WWU_JA~1.jpg"></img> 
+    <br> <br>
+
+    <p class="lead">
+      <button href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" id="btn">Step</button>
+    </p>
+
+    <div class="upgrades"> 
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              New Shoes
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">A new pair of shoes to climb faster!</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="shoeCount"></span></p>
+              <button class="dropdown-item" id="buyShoe">Buy (50 steps)</button>
+              <button class="dropdown-item" id="sellShoe">Sell (25 steps)</button>
+            </div>
+        </span>
+
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Friend
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">A friend to climb by your side!</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="friendCount"></span></p>
+              <button class="dropdown-item" id="buyFriend">Buy (250 steps)</button>
+              <button class="dropdown-item" id="sellFriend">Sell (125 steps)</button>
+            </div>
+        </span>
+
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Robo-Stepper
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">A robot to climb for you!</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="botCount"></span></p>
+              <button class="dropdown-item" id="buyBot">Buy (1250 steps)</button>
+              <button class="dropdown-item" id="sellBot">Sell (625 steps)</button>
+            </div>
+        </span>
+    </div>
+    <br>
+ 
+    <div class="upgrades" id="newUpgrades" style="display: none;"> 
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Stilts
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">Longer legs for you, your friends and your robots!</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="stiltsCount"></span></p>
+              <button class="dropdown-item" id="buyStilts">Buy (2500 steps)</button>
+              <button class="dropdown-item" id="sellStilts">Sell (1250 steps)</button>
+            </div>
+        </span>
+
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Rocket-Propelled Shoes
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">Say hello to high jumps, and goodbye to feet.</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="rocketCount"></span></p>
+              <button class="dropdown-item" id="buyRocket">Buy (10000 steps)</button>
+              <button class="dropdown-item" id="sellRocket">Sell (5000 steps)</button>
+            </div>
+        </span>
+
+        <span class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Groundship
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item">No, it can't fly, but it can climb really fast...</p>
+              <p class="dropdown-item">You have <span style=font-weight:bold id="shipCount"></span></p>
+              <button class="dropdown-item" id="buyShip">Buy (50000 steps)</button>
+              <button class="dropdown-item" id="sellShip">Sell (25000 steps)</button>
+            </div>
+        </span>
+
+    </div>
+  </main>
+
+</div>
+
+
+    
+  </body>
+<script src="steps.js"></script>
+<script></script>
+</html>
