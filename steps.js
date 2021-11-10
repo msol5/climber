@@ -12,6 +12,7 @@ let botCount = 0
 let stiltsCount = 0
 let rocketCount = 0
 let shipCount = 0
+let prompted = false
 
 let soldAll = false
 
@@ -61,7 +62,16 @@ function autoStep() {
         steps += (stepsPerSecond/10);
         document.getElementById("counter").innerHTML = steps.toFixed(1)
     }
-    else;
+    else {
+            if (prompted == false) {
+            answer = confirm("You can't ascend any further right now. Do you want to give up?");
+            if (answer == true) {
+                close()
+            }
+            else {
+                prompted = true;
+            }
+        }
         frugalCheck()
 }
 
