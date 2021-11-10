@@ -51,11 +51,11 @@ function step(){
     document.getElementById("counter").innerHTML = steps.toFixed(1)
 }
 
-window.setInterval(autoStep,100)
+window.setInterval(autoStep,1000)
 
 function autoStep() {
     if (steps<1250 || soldAll == true) {
-        steps += (stepsPerSecond/10);
+        steps += (stepsPerSecond);
         document.getElementById("counter").innerHTML = steps.toFixed(1)
     }
     else;
