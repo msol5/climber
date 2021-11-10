@@ -59,11 +59,11 @@ window.setInterval(autoStep,100)
 
 function autoStep() {
     if (steps<1250 || soldAll == true) {
-        steps += (stepsPerSecond/10);
+        steps += (stepsPerSecond);
         document.getElementById("counter").innerHTML = steps.toFixed(1)
     }
     else {
-            if (prompted == false) {
+        if (prompted == false) {
             answer = confirm("You can't ascend any further right now. Do you want to give up?");
             if (answer == true) {
                 close()
@@ -73,7 +73,8 @@ function autoStep() {
             }
         }
         frugalCheck()
-}}
+    }
+}
 
 function frugalCheck() {
     if ((steps>1240) && (shoeCount==0) && (friendCount==0) && (botCount==0)) {
