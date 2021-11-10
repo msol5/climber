@@ -51,6 +51,7 @@ body {
 
 .upgrades {
   white-space: nowrap;
+  display:inline-flex;
 }
 
 a {
