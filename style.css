@@ -3,7 +3,8 @@
  */
 
 /* Custom default button */
-.btn-secondary,
+.btn-secondary
+  touch-action: manipulation,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
