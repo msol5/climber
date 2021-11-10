@@ -20,6 +20,9 @@ const newUpgrades = document.getElementById("newUpgrades")
 document.getElementById("shoeCount").innerHTML = shoeCount
 document.getElementById("friendCount").innerHTML = friendCount
 document.getElementById("botCount").innerHTML = botCount
+document.getElementById("stiltsCount").innerHTML = stiltsCount
+document.getElementById("rocketCount").innerHTML = rocketCount
+document.getElementById("shipCount").innerHTML = shipCount
 
 document.getElementById("sps").innerHTML = stepsPerSecond
 document.getElementById("counter").innerHTML = steps
