@@ -48,3 +48,7 @@ body {
 .dropdown-item {
   margin:5px;
 }
+
+a {
+  margin-bottom:20px;
+}
