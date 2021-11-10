@@ -73,7 +73,7 @@ function autoStep() {
             }
         }
         frugalCheck()
-}
+}}
 
 function frugalCheck() {
     if ((steps>1240) && (shoeCount==0) && (friendCount==0) && (botCount==0)) {
