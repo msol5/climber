@@ -49,6 +49,10 @@ body {
   margin:5px;
 }
 
+.upgrades {
+  white-space: nowrap;
+}
+
 a {
   margin-bottom:20px;
 }
